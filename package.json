@@ -10,7 +10,8 @@
 		"build:ui": "rm -rf build && cd ./frontend/ && npm run build && cp -r build ../",
 		"deploy": "git push heroku main",
 		"deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
-		"logs:prod": "heroku logs --tail"
+		"logs:prod": "heroku logs --tail",
+		"lint": "eslint ."
 	},
 	"author": "kgni",
 	"license": "ISC",
@@ -19,5 +20,8 @@
 		"dotenv": "^16.0.1",
 		"express": "^4.18.1",
 		"mongoose": "^6.4.2"
+	},
+	"devDependencies": {
+		"eslint": "^8.19.0"
 	}
 }
