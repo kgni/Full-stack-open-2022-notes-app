@@ -13,3 +13,5 @@ describe('average', () => {
 		expect(average([])).toBe(0);
 	});
 });
+
+
